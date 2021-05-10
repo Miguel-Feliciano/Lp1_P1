@@ -19,23 +19,102 @@ namespace P1
             board = new State[3, 8];
 
             Square[] Squares = new Square[20];
+            Square[] FakeSquares = new Square[4];
 
-            Console.Write("|");
-            Squares[0] = new Square();
-            Squares[0].SquareType = 1;
-            Squares[0].PrintSquare();
-            
-            /*Console.WriteLine("|_|_|_|");
-            Console.WriteLine("|_|_|_|");
-            Console.WriteLine("|_|_|_|");
-            Console.WriteLine("|_|_|_|");
-            Console.WriteLine("  |_|  ");
-            Console.WriteLine("  |_|  ");
-            Console.WriteLine("|_|_|_|");
-            Console.WriteLine("|_|_|_|");*/
+            int ix = 0;
+
+            int fix = 0;
+
+                    //Line 1
+                    Console.Write("|");
+                    Squares[ix] = new Square(1);
+                    Squares[ix++].PrintSquare();
+                    Console.Write("|");
+                    Squares[ix] = new Square(0);
+                    Squares[ix++].PrintSquare();
+                    Console.Write("|");
+                    Squares[ix] = new Square(1);
+                    Squares[ix++].PrintSquare();
+                    Console.WriteLine("|");
+                    //Line 2
+                    Console.Write("|");
+                    Squares[ix] = new Square(0);
+                    Squares[ix++].PrintSquare();
+                    Console.Write("|");
+                    Squares[ix] = new Square(0);
+                    Squares[ix++].PrintSquare();
+                    Console.Write("|");
+                    Squares[ix] = new Square(0);
+                    Squares[ix++].PrintSquare();
+                    Console.WriteLine("|");
+                    //Line 3
+                    Console.Write("|");
+                    Squares[ix] = new Square(0);
+                    Squares[ix++].PrintSquare();
+                    Console.Write("|");
+                    Squares[ix] = new Square(0);
+                    Squares[ix++].PrintSquare();
+                    Console.Write("|");
+                    Squares[ix] = new Square(0);
+                    Squares[ix++].PrintSquare();
+                    Console.WriteLine("|");
+                    //Line 4
+                    Console.Write("|");
+                    Squares[ix] = new Square(0);
+                    Squares[ix++].PrintSquare();
+                    Console.Write("|");
+                    Squares[ix] = new Square(1);
+                    Squares[ix++].PrintSquare();
+                    Console.Write("|");
+                    Squares[ix] = new Square(0);
+                    Squares[ix++].PrintSquare();
+                    Console.WriteLine("|");
+                    //Line 5
+                    Console.Write("  ");
+                    FakeSquares[fix] = new Square(2);
+                    FakeSquares[fix++].PrintSquare();
+                    Console.Write("|");
+                    Squares[ix] = new Square(0);
+                    Squares[ix++].PrintSquare();
+                    Console.Write("|");
+                    FakeSquares[fix] = new Square(2);
+                    FakeSquares[fix++].PrintSquare();
+                    Console.WriteLine(" ");
+                    //Line 6
+                    Console.Write("  ");
+                    FakeSquares[fix] = new Square(2);
+                    FakeSquares[fix++].PrintSquare();
+                    Console.Write("|");
+                    Squares[ix] = new Square(0);
+                    Squares[ix++].PrintSquare();
+                    Console.Write("|");
+                    FakeSquares[fix] = new Square(2);
+                    FakeSquares[fix++].PrintSquare();
+                    Console.WriteLine(" ");
+                    //Line 7
+                    Console.Write("|");
+                    Squares[ix] = new Square(1);
+                    Squares[ix++].PrintSquare();
+                    Console.Write("|");
+                    Squares[ix] = new Square(0);
+                    Squares[ix++].PrintSquare();
+                    Console.Write("|");
+                    Squares[ix] = new Square(1);
+                    Squares[ix++].PrintSquare();
+                    Console.WriteLine("|");
+                    //Line 8
+                    Console.Write("|");
+                    Squares[ix] = new Square(0);
+                    Squares[ix++].PrintSquare();
+                    Console.Write("|");
+                    Squares[ix] = new Square(0);
+                    Squares[ix++].PrintSquare();
+                    Console.Write("|");
+                    Squares[ix] = new Square(0);
+                    Squares[ix++].PrintSquare();
+                    Console.WriteLine("|");
 
         }
-
 
     }
     public class Square
@@ -45,7 +124,7 @@ namespace P1
         /// </summary>
         int on = 1;
         int off = 0;
-        
+
         /// <summary>
         /// 0 = no player, 1 = player 1, 2 = player 2
         /// </summary>
@@ -54,20 +133,27 @@ namespace P1
         /// <summary>
         /// special = free turn square, normal = normal square
         /// </summary>
-        char special = (char)0xa9; 
-        char normal = (char)0xff;
+        char special = (char)0x40;
+        char normal = (char)0xfe;
+
+        char fake = (char)0x00;
 
         int squareType;
 
 
         private void NormalSquares()
         {
-             Console.Write(0xff.ToString("X2"));
+            Console.Write(normal);
         }
 
         private void SpecialSquares()
         {
-            Console.Write(0xa9.ToString("X2"));
+            Console.Write(special);
+        }
+
+        private void FakeSquares()
+        {
+            Console.Write(fake);
         }
 
         public int Player
@@ -145,17 +231,26 @@ namespace P1
             this.squareType = 0;
             this.On = 1;
 
+
+        }
+        public Square(int t)
+        {
+            squareType = t;
         }
 
         public void PrintSquare()
         {
-            if ( squareType == 0)
+            if (squareType == 0)
             {
                 this.NormalSquares();
             }
-            else
+            else if (squareType == 1)
             {
                 this.SpecialSquares();
+            }
+            else
+            {
+                this.FakeSquares();
             }
         }
 
