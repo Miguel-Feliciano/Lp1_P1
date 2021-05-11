@@ -25,94 +25,94 @@ namespace P1
 
             int fix = 0;
 
-                    //Line 1
-                    Console.Write("|");
-                    Squares[ix] = new Square(1);
-                    Squares[ix++].PrintSquare();
-                    Console.Write("|");
-                    Squares[ix] = new Square(0);
-                    Squares[ix++].PrintSquare();
-                    Console.Write("|");
-                    Squares[ix] = new Square(1);
-                    Squares[ix++].PrintSquare();
-                    Console.WriteLine("|");
-                    //Line 2
-                    Console.Write("|");
-                    Squares[ix] = new Square(0);
-                    Squares[ix++].PrintSquare();
-                    Console.Write("|");
-                    Squares[ix] = new Square(0);
-                    Squares[ix++].PrintSquare();
-                    Console.Write("|");
-                    Squares[ix] = new Square(0);
-                    Squares[ix++].PrintSquare();
-                    Console.WriteLine("|");
-                    //Line 3
-                    Console.Write("|");
-                    Squares[ix] = new Square(0);
-                    Squares[ix++].PrintSquare();
-                    Console.Write("|");
-                    Squares[ix] = new Square(0);
-                    Squares[ix++].PrintSquare();
-                    Console.Write("|");
-                    Squares[ix] = new Square(0);
-                    Squares[ix++].PrintSquare();
-                    Console.WriteLine("|");
-                    //Line 4
-                    Console.Write("|");
-                    Squares[ix] = new Square(0);
-                    Squares[ix++].PrintSquare();
-                    Console.Write("|");
-                    Squares[ix] = new Square(1);
-                    Squares[ix++].PrintSquare();
-                    Console.Write("|");
-                    Squares[ix] = new Square(0);
-                    Squares[ix++].PrintSquare();
-                    Console.WriteLine("|");
-                    //Line 5
-                    Console.Write("  ");
-                    FakeSquares[fix] = new Square(2);
-                    FakeSquares[fix++].PrintSquare();
-                    Console.Write("|");
-                    Squares[ix] = new Square(0);
-                    Squares[ix++].PrintSquare();
-                    Console.Write("|");
-                    FakeSquares[fix] = new Square(2);
-                    FakeSquares[fix++].PrintSquare();
-                    Console.WriteLine(" ");
-                    //Line 6
-                    Console.Write("  ");
-                    FakeSquares[fix] = new Square(2);
-                    FakeSquares[fix++].PrintSquare();
-                    Console.Write("|");
-                    Squares[ix] = new Square(0);
-                    Squares[ix++].PrintSquare();
-                    Console.Write("|");
-                    FakeSquares[fix] = new Square(2);
-                    FakeSquares[fix++].PrintSquare();
-                    Console.WriteLine(" ");
-                    //Line 7
-                    Console.Write("|");
-                    Squares[ix] = new Square(1);
-                    Squares[ix++].PrintSquare();
-                    Console.Write("|");
-                    Squares[ix] = new Square(0);
-                    Squares[ix++].PrintSquare();
-                    Console.Write("|");
-                    Squares[ix] = new Square(1);
-                    Squares[ix++].PrintSquare();
-                    Console.WriteLine("|");
-                    //Line 8
-                    Console.Write("|");
-                    Squares[ix] = new Square(0);
-                    Squares[ix++].PrintSquare();
-                    Console.Write("|");
-                    Squares[ix] = new Square(0);
-                    Squares[ix++].PrintSquare();
-                    Console.Write("|");
-                    Squares[ix] = new Square(0);
-                    Squares[ix++].PrintSquare();
-                    Console.WriteLine("|");
+            //Line 1
+            Console.Write("|");
+            Squares[ix] = new Square(1);
+            Squares[ix++].PrintSquare();
+            Console.Write("|");
+            Squares[ix] = new Square(0);
+            Squares[ix++].PrintSquare();
+            Console.Write("|");
+            Squares[ix] = new Square(1);
+            Squares[ix++].PrintSquare();
+            Console.WriteLine("|");
+            //Line 2
+            Console.Write("|");
+            Squares[ix] = new Square(0);
+            Squares[ix++].PrintSquare();
+            Console.Write("|");
+            Squares[ix] = new Square(0);
+            Squares[ix++].PrintSquare();
+            Console.Write("|");
+            Squares[ix] = new Square(0);
+            Squares[ix++].PrintSquare();
+            Console.WriteLine("|");
+            //Line 3
+            Console.Write("|");
+            Squares[ix] = new Square(0);
+            Squares[ix++].PrintSquare();
+            Console.Write("|");
+            Squares[ix] = new Square(0);
+            Squares[ix++].PrintSquare();
+            Console.Write("|");
+            Squares[ix] = new Square(0);
+            Squares[ix++].PrintSquare();
+            Console.WriteLine("|");
+            //Line 4
+            Console.Write("|");
+            Squares[ix] = new Square(0);
+            Squares[ix++].PrintSquare();
+            Console.Write("|");
+            Squares[ix] = new Square(1);
+            Squares[ix++].PrintSquare();
+            Console.Write("|");
+            Squares[ix] = new Square(0);
+            Squares[ix++].PrintSquare();
+            Console.WriteLine("|");
+            //Line 5
+            Console.Write("  ");
+            FakeSquares[fix] = new Square(2);
+            FakeSquares[fix++].PrintSquare();
+            Console.Write("|");
+            Squares[ix] = new Square(0);
+            Squares[ix++].PrintSquare();
+            Console.Write("|");
+            FakeSquares[fix] = new Square(2);
+            FakeSquares[fix++].PrintSquare();
+            Console.WriteLine(" ");
+            //Line 6
+            Console.Write("  ");
+            FakeSquares[fix] = new Square(2);
+            FakeSquares[fix++].PrintSquare();
+            Console.Write("|");
+            Squares[ix] = new Square(0);
+            Squares[ix++].PrintSquare();
+            Console.Write("|");
+            FakeSquares[fix] = new Square(2);
+            FakeSquares[fix++].PrintSquare();
+            Console.WriteLine(" ");
+            //Line 7
+            Console.Write("|");
+            Squares[ix] = new Square(1);
+            Squares[ix++].PrintSquare();
+            Console.Write("|");
+            Squares[ix] = new Square(0);
+            Squares[ix++].PrintSquare();
+            Console.Write("|");
+            Squares[ix] = new Square(1);
+            Squares[ix++].PrintSquare();
+            Console.WriteLine("|");
+            //Line 8
+            Console.Write("|");
+            Squares[ix] = new Square(0);
+            Squares[ix++].PrintSquare();
+            Console.Write("|");
+            Squares[ix] = new Square(0);
+            Squares[ix++].PrintSquare();
+            Console.Write("|");
+            Squares[ix] = new Square(0);
+            Squares[ix++].PrintSquare();
+            Console.WriteLine("|");
 
         }
 
