@@ -16,6 +16,8 @@ namespace P1
 
         char middle = (char)0x2666;
 
+        int v = 0;
+
 
         public char RollDice()
         {
@@ -28,10 +30,24 @@ namespace P1
                 case 0: return (up);
                 case 1: return (left);
                 case 2: return (right);
-                case 3: return (middle);
-                
+                case 3:
+                {
+                    v = 1; 
+                    return (middle);
+                }
             }
             return '/';
+        }
+        public int V
+        {
+            get
+            {
+                return this.v;
+            }
+            set
+            {
+                this.v = value;
+            }
         }
     }
 }

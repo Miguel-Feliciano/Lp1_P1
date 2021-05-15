@@ -17,7 +17,7 @@ namespace P1
         public void DrawBoard()
         {
             board = new State[3, 8];
-
+            
             Square[] Squares = new Square[20];
             Square[] FakeSquares = new Square[4];
 
@@ -140,7 +140,9 @@ namespace P1
 
         int squareType;
 
-
+        /// <summary>
+        /// Returns what type of square it is on the board
+        /// </summary>
         private void NormalSquares()
         {
             Console.Write(normal);
@@ -155,6 +157,11 @@ namespace P1
         {
             Console.Write(fake);
         }
+        /// <summary>
+        /// Gets and sets the value of the player, special and normal squares,
+        /// the square type and if its on or off
+        /// </summary>
+        /// <value></value>
 
         public int Player
         {
@@ -224,7 +231,10 @@ namespace P1
                 this.off = value;
             }
         }
-
+        /// <summary>
+        /// Created a value for the player and for the squares that can say
+        /// if it is on or off, specially for the squares that can't exist
+        /// </summary>
         public Square()
         {
             this.Player = 0;
