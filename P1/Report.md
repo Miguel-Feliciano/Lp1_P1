@@ -20,4 +20,4 @@ As for the rest of the game, I was unable to finish it due to various constraint
 
 Here is the UML Diagram of my project:
 
-![](../UML.png)
+![](UML.png)
