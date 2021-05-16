@@ -5,21 +5,22 @@ namespace P1
 {
     public class Board
     {
-
+        Square[] Squares = new Square[20];
+        Square[] FakeSquares = new Square[4];
         /// <summary>
         /// Array to contain the board
         /// </summary>
-        private State[,] board;
+
+        public Square[] GetSquares()
+        {
+            return Squares;
+        }
 
         /// <summary>
         /// Draw Board 
         /// </summary>
         public void DrawBoard()
         {
-            board = new State[3, 8];
-            
-            Square[] Squares = new Square[20];
-            Square[] FakeSquares = new Square[4];
 
             int ix = 0;
 
@@ -114,8 +115,40 @@ namespace P1
             Squares[ix++].PrintSquare();
             Console.WriteLine("|");
 
-        }
 
+
+        }
+        /// <summary>
+        /// Positions that each player can move to 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public int Idx(int id)
+        {
+            switch (id)
+            {
+                case 9: return 6;
+                case 6: return 3;
+                case 3: return 0;
+                case 0: return 1;
+                case 11: return 8;
+                case 8: return 5;
+                case 5: return 2;
+                case 2: return 1;
+                case 1: return 4;
+                case 4: return 7;
+                case 7: return 10;
+                case 10: return 13;
+                case 13: return 16;
+                case 16: return 19;
+                case 19: return 22;
+                case 22: return 21;
+                case 21: return 18;
+                case 18: return 100;
+
+            }
+            return -1;
+        }
     }
     public class Square
     {

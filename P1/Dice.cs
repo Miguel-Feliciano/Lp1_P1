@@ -5,7 +5,7 @@ namespace P1
     public class Dice
     {
         /// <summary>
-        /// Possible dice positions
+        /// Possible dice positions and ASCII representation
         /// </summary>
         /// <returns></returns>
         char up = (char)0x25b2;
@@ -18,7 +18,11 @@ namespace P1
 
         int v = 0;
 
-
+        /// <summary>
+        /// Rolls the dice and returns the ASCII that represents the number it
+        /// rolled
+        /// </summary>
+        /// <returns></returns>
         public char RollDice()
         {
             var rnd = new Random();
@@ -38,6 +42,10 @@ namespace P1
             }
             return '/';
         }
+        /// <summary>
+        /// Value of the dice
+        /// </summary>
+        /// <value></value>
         public int V
         {
             get

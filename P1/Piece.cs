@@ -13,6 +13,10 @@ namespace P1
         {
             p = new Player(pn);
         }
+        /// <summary>
+        /// Returns the piece according to the player
+        /// </summary>
+        /// <returns></returns>
 
         public char DrawPiece()
         {
@@ -30,6 +34,14 @@ namespace P1
           {
               this.position = value;
           }
+        }
+
+        /// <summary>
+        /// Value given if the piece is killed 
+        /// </summary>
+        public void killPiece()
+        {
+            position = -1;
         }
 
 
